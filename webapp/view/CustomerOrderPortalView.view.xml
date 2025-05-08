@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:layout="sap.ui.layout"
+  xmlns:form="sap.ui.layout.form"
+  xmlns:table="sap.ui.table"
+  xmlns:core="sap.ui.core"
+  xmlns:richtexteditor="sap.ui.richtexteditor"
+  xmlns:viz="sap.viz.ui5"
+  controllerName="preview.app.controller.CustomerOrderPortalView"
+  displayBlock="true">
+  <App id="app">
+    <pages>
+      <Page title="CustomerOrderPortalView" enableScrolling="true">
+        <content>
+          <Title id="title_5eyymymn" text="Customer Order Portal" />
+          <form:SimpleForm id="mainFlow" width="100%">
+            <m:Bar id="headerBar" text="Customer Order Portal">
+              <contentLeft>
+                <!-- Empty left content -->
+              </contentLeft>
+              <contentMiddle>
+                <m:Text id="headerBar_text" text="Customer Order Portal" />
+              </contentMiddle>
+              <contentRight>
+                <!-- Empty right content -->
+              </contentRight>
+            </m:Bar>
+            <layout:HorizontalLayout id="notificationsRow">
+              <MessagePopover id="notificationArea" width="100%" />
+            </layout:HorizontalLayout>
+            <layout:HorizontalLayout id="quickActionRow">
+              <m:Button id="button_41t40qqq" text="Create New Order" press="onOnCreateNewOrder" />
+              <m:Button id="button_0bk7557o" text="View Order Status" press="onOnViewOrderStatus" />
+              <m:Button id="button_d3j0wdm3" text="View Catalog" press="onOnViewCatalog" />
+              <m:Button id="button_6vgvf388" text="Contact Support" press="onOnContactSupport" />
+              <m:Button id="button_0vyo06rv" text="Download Price List" press="onOnDownloadPriceList" />
+            </layout:HorizontalLayout>
+            <IconTabBar id="mainTabStrip" width="100%">
+              <items>
+                <IconTabFilter id="tabFilter_f6kcx3o4" key="tab0" text="Dashboard" icon="sap-icon://document">
+                  <content>
+                    <m:Text id="tab_jb25qlly" text="Dashboard" />
+                  </content>
+                </IconTabFilter>
+                <IconTabFilter id="tabFilter_lke79opc" key="tab1" text="My Orders" icon="sap-icon://document">
+                  <content>
+                    <m:Text id="tab_u4pu15wz" text="My Orders" />
+                  </content>
+                </IconTabFilter>
+                <IconTabFilter id="tabFilter_oe2frrqp" key="tab2" text="Product Catalog" icon="sap-icon://document">
+                  <content>
+                    <m:Text id="tab_z74nj07o" text="Product Catalog" />
+                  </content>
+                </IconTabFilter>
+                <IconTabFilter id="tabFilter_w1muo3f7" key="tab3" text="Shopping Cart" icon="sap-icon://document">
+                  <content>
+                    <m:Text id="tab_746y3wjy" text="Shopping Cart" />
+                  </content>
+                </IconTabFilter>
+                <IconTabFilter id="tabFilter_xus2h1le" key="tab4" text="Account Settings" icon="sap-icon://document">
+                  <content>
+                    <m:Text id="tab_g9tsv8f2" text="Account Settings" />
+                  </content>
+                </IconTabFilter>
+              </items>
+            </IconTabBar>
+            <m:Bar id="portalFooter" text="(c) 2025 Company Name. All rights reserved.">
+              <contentLeft>
+                <!-- Empty left content -->
+              </contentLeft>
+              <contentMiddle>
+                <m:Text id="portalFooter_text" text="(c) 2025 Company Name. All rights reserved." />
+              </contentMiddle>
+              <contentRight>
+                <m:Button id="button_wxsrulrk" text="Help" press="onOnHelp" />
+                <m:Button id="button_wc0e5xw5" text="Terms &amp; Conditions" press="onOnTermsAndConditions" />
+                <m:Button id="button_lol7q5qf" text="Privacy Policy" press="onOnPrivacyPolicy" />
+                <m:Button id="button_mhs3urmc" text="Contact Us" press="onOnContactUs" />
+                <m:Button id="button_0uzsb327" text="Logout" press="onOnLogout" />
+              </contentRight>
+            </m:Bar>
+          </form:SimpleForm>
+        </content>
+      </Page>
+    </pages>
+  </App>
+</mvc:View>
